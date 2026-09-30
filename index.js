@@ -131,7 +131,7 @@ PluginError.prototype.toString = function () {
     return this._messageWithDetails() + "\nStack:\n" + stack;
   }.bind(this);
 
-  var msg = "";
+  var msg;
   if (this.showStack) {
     // If there is no wrapped error, use the stack captured in the PluginError ctor
     if (this.__safety) {
